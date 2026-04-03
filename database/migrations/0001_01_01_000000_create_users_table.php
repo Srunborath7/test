@@ -28,7 +28,7 @@ return new class extends Migration
         });
 
         Schema::create('sessions', function (Blueprint $collection) {
-            $collection->string('id')->primary();
+             $collection->string('id')->nullable();
             $collection->foreignId('user_id')->nullable()->index();
             $collection->string('ip_address', 45)->nullable();
             $collection->text('user_agent')->nullable();
